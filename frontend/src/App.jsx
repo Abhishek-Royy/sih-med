@@ -7,6 +7,8 @@ import Records from "./pages/Records"
 import Blogspage from "./pages/Blogs"
 import Seetings from "./pages/Settings"
 import Authentication from "./pages/Login"
+import Footer from './components/Footer'
+import Notfound from './pages/Notfound'
 
 function App() {
   return (
@@ -19,7 +21,11 @@ function App() {
         <Route path='/blogs'  element={<Blogspage/>}/>
         <Route path='/seetings'  element={<Seetings/>}/>
         <Route path='/auth'  element={<Authentication/>}/>
+
+
+        <Route path='*'  element={<Notfound/>}/>
       </Routes>
+      <Footer/>
       </BrowserRouter>
     </>
   )
