@@ -1,12 +1,12 @@
 import React from "react";
-import {  motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 import { TiTickOutline } from "react-icons/ti";
 
 import mainRightImg from "../assets/main-right.png";
 import Faq from "../layout/Faq";
-
+import Testimonial from "../layout/Testimonial";
 
 function Homepage() {
   const services = [
@@ -128,11 +128,19 @@ function Homepage() {
           ))}
         </div>
 
-{/* ****************************** */}
+        {/* ****************************** */}
         <div className="benifits-sec md:w-full w-[95%] mx-auto h-auto  flex items-start flex-col justify-center md:py-10 mt-10">
-           <h1 className="text-4xl font-semibold text-[#000058]">Benifites</h1>
-           <p className="ms:text-[20px]">Unlock the Power of Healthcare Software: Enhancing Efficiency, Streamlining Operations, and Elevating Patient Care</p>
-            <Faq/>
+          <h1 className="text-4xl font-semibold text-[#000058]">Benifites</h1>
+          <p className="ms:text-[20px]">
+            Unlock the Power of Healthcare Software: Enhancing Efficiency,
+            Streamlining Operations, and Elevating Patient Care
+          </p>
+          <Faq />
+        </div>
+
+        {/* ************************ */}
+        <div className="testimonials md:w-full w-[90%] mx-auto h-auto mt-10">
+          <Testimonial />
         </div>
       </div>
     </>
