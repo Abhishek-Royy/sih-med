@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 import mainRightImg from "../assets/main-right.png";
 
@@ -30,12 +31,12 @@ function Homepage() {
               Digital Healthcare Platform
             </h1>
             <div className="buttons w-full h-auto mt-10 ">
-              <a
-                href="/auth"
+              <Link
+                to="/auth"
                 class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-base px-8 py-4 text-center me-2 mb-2"
               >
                 Book a Free Demo
-              </a>
+              </Link>
             </div>
           </div>
           <div className="main-right md:w-1/2 w-full md:h-full h-auto mt-14 flex items-center md:justify-end">
