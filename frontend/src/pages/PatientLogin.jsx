@@ -48,7 +48,7 @@ function PatientLogin() {
                     alt="Apple"
                     className="w-10  mr-2"
                   />
-                  Log in with Aadhaar
+                  Sign in with Aadhaar
                 </Link>
               </div>
 
@@ -100,12 +100,14 @@ function PatientLogin() {
                     Forgot password?
                   </a>
                 </div>
+                <Link to="/auth/patient-login/otp">
                 <button
                   className="w-full px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   type="submit"
                 >
                   Sign Up to your account
                 </button>
+                </Link>
               </form>
 
               <div className="mt-4 text-center text-gray-400">

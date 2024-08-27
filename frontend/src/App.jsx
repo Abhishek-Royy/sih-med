@@ -10,6 +10,7 @@ import PatientLogin from './pages/PatientLogin'
 import HospitalLogin from './pages/HospitalLogin'
 import Footer from './components/Footer'
 import Notfound from './pages/Notfound'
+import EnterOTP from './pages/Otp'
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
         <Route path='/solutions'  element={<Solutions/>}/>
         <Route path='/auth/patient-login'  element={<PatientLogin/>}/>
         <Route path='/auth/hospital-login'  element={<HospitalLogin/>}/>
+
+
+        <Route path='/auth/patient-login/otp'  element={<EnterOTP/>}/>
         
 
 
