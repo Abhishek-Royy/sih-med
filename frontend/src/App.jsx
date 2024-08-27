@@ -12,6 +12,8 @@ import Footer from './components/Footer'
 import Notfound from './pages/Notfound'
 import EnterOTP from './pages/Otp'
 
+import PatientHomeUi from './pages/PatientHomeUi'
+
 function App() {
   return (
     <>
@@ -27,6 +29,10 @@ function App() {
 
 
         <Route path='/auth/patient-login/otp'  element={<EnterOTP/>}/>
+
+
+
+        <Route path='/patienthomeui'  element={<PatientHomeUi/>}/>
         
 
 

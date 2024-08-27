@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 
 const EnterOTP = () => {
   return (
@@ -37,12 +38,14 @@ const EnterOTP = () => {
                     />
                   ))}
                 </div>
+                <Link to="/patienthomeui">
                 <button
                   type="submit"
                   className="w-full bg-indigo-500 text-white py-3 rounded-lg hover:bg-indigo-600 transition duration-200"
                 >
                   Submit OTP
                 </button>
+                </Link>
               </form>
               <div className="mt-4 text-center">
                 <p className="text-sm text-gray-600">
