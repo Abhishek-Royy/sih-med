@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function PatientLogin() {
   return (
     <>
-      <div className="main w-full md:h-[85vh] md:flex block md:py-0 py-16 lg:px-24">
+      <div className="main w-full h-auto md:flex block pt-16 md:pb-8 pb-16 lg:px-24">
         <div className="patient-left md:w-1/2 w-[95%] mx-auto h-full md:flex items-center justify-center hidden">
             <img className="w-full h-full object-contain" src="https://png.pngtree.com/png-vector/20200402/ourmid/pngtree-the-doctor-examines-the-patient-with-covid-19-symptoms-png-image_2171886.jpg" alt="" />
         </div>
@@ -91,6 +91,24 @@ function PatientLogin() {
                     </label>
                   </div>
                 </div>
+                <div className="mb-0">
+                  <div class="relative z-0 w-full mb-5 group">
+                    <input
+                      type="password"
+                      name="password"
+                      id="password"
+                      className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                      placeholder=" "
+                      required
+                    />
+                    <label
+                      for="password"
+                      class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-800 peer-focus:dark:text-blue-800 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    >
+                      Enter Password
+                    </label>
+                  </div>
+                </div>
                 <div className="flex items-center justify-between mb-4 text-sm text-gray-400">
                   <div>
                     <input type="checkbox" id="remember-me" className="mr-2" />
@@ -102,10 +120,10 @@ function PatientLogin() {
                 </div>
                 <Link to="/auth/patient-login/otp">
                 <button
-                  className="w-full px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-3 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   type="submit"
                 >
-                  Sign Up to your account
+                  Sign Up
                 </button>
                 </Link>
               </form>
