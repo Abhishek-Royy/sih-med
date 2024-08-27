@@ -3,7 +3,7 @@ import React from 'react'
 function Settings() {
   return (
     <div>
-      settings jsx
+      solutions jsx
     </div>
   )
 }

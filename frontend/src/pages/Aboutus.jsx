@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Records() {
+function Aboutus() {
   return (
     <div>
-      records jsx
+      About jsx
     </div>
   )
 }
 
-export default Records
+export default Aboutus

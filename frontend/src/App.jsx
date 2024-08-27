@@ -3,10 +3,11 @@ import { BrowserRouter,Route,Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
 
 import HomePage from "./pages/Homepage"
-import Records from "./pages/Records"
+import Aboutus from "./pages/Aboutus"
 import Blogspage from "./pages/Blogs"
-import Seetings from "./pages/Settings"
-import Authentication from "./pages/Login"
+import Solutions from "./pages/Solutions"
+import PatientLogin from './pages/PatientLogin'
+import HospitalLogin from './pages/HospitalLogin'
 import Footer from './components/Footer'
 import Notfound from './pages/Notfound'
 
@@ -17,10 +18,12 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='/'  element={<HomePage/>}/>
-        <Route path='/records'  element={<Records/>}/>
+        <Route path='/aboutus'  element={<Aboutus/>}/>
         <Route path='/blogs'  element={<Blogspage/>}/>
-        <Route path='/seetings'  element={<Seetings/>}/>
-        <Route path='/auth'  element={<Authentication/>}/>
+        <Route path='/solutions'  element={<Solutions/>}/>
+        <Route path='/auth/patient-login'  element={<PatientLogin/>}/>
+        <Route path='/auth/hospital-login'  element={<HospitalLogin/>}/>
+        
 
 
         <Route path='*'  element={<Notfound/>}/>
