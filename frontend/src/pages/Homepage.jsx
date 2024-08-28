@@ -7,6 +7,7 @@ import { TiTickOutline } from "react-icons/ti";
 import mainRightImg from "../assets/main-right.png";
 import Faq from "../layout/Faq";
 import Testimonial from "../layout/Testimonial";
+import Usecase from "../layout/Usecase";
 
 function Homepage() {
   const services = [
@@ -126,6 +127,10 @@ function Homepage() {
               </p>
             </motion.a>
           ))}
+        </div>
+
+        <div className="usecaseState md:mt-20 mt-10 md:w-full w-[95%] mx-auto">
+          <Usecase/>
         </div>
 
         {/* ****************************** */}

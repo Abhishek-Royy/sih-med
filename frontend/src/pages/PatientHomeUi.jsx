@@ -32,14 +32,14 @@ function PatientHomeUi() {
             <div className="all-solutions w-full  mt-10 flex flex-wrap items-center justify-evenly gap-5">
               <a
                 href="#"
-                className="flex flex-col items-center bg-white border border-yellow-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 p-2"
+                className="flex flex-col items-center bg-white border border-yellow-200 rounded-lg shadow md:flex-row md:max-w-xl w-[95%] h-[60%]  hover:bg-gray-100 p-2"
                 style={{
                   boxShadow:
                     " rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px",
                 }}
               >
                 <img
-                  className="object-contain w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+                  className="object-contain w-1/2 rounded-t-lg h-90 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
                   src={emergancy}
                   alt=""
                 />
@@ -55,14 +55,14 @@ function PatientHomeUi() {
               </a>
               <a
                 href="#"
-                className="flex flex-col items-center bg-white border border-yellow-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 p-2"
+                className="flex flex-col items-center bg-white border border-yellow-200 rounded-lg shadow md:flex-row md:max-w-xl w-[95%] h-[60%]  hover:bg-gray-100 p-2"
                 style={{
                   boxShadow:
                     " rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px",
                 }}
               >
                 <img
-                  className="object-contain w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+                  className="object-contain w-1/2 rounded-t-lg h-90 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
                   src={bedavailable}
                   alt=""
                 />
@@ -78,14 +78,14 @@ function PatientHomeUi() {
               </a>
               <a
                 href="#"
-                className="flex flex-col items-center bg-white border border-yellow-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 p-2"
+                className="flex flex-col items-center bg-white border border-yellow-200 rounded-lg shadow md:flex-row md:max-w-xl w-[95%] h-[60%]  hover:bg-gray-100 p-2"
                 style={{
                   boxShadow:
                     " rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px",
                 }}
               >
                 <img
-                  className="object-contain w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+                  className="object-contain w-1/2 rounded-t-lg h-90 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
                   src={opdbooking}
                   alt=""
                 />

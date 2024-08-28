@@ -38,7 +38,7 @@ const EnterOTP = () => {
                     />
                   ))}
                 </div>
-                <Link to="/patienthomeui">
+                <Link to="/patienthomeui-profile">
                 <button
                   type="submit"
                   className="w-full bg-indigo-500 text-white py-3 rounded-lg hover:bg-indigo-600 transition duration-200"
