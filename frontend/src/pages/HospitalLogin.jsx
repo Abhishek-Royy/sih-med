@@ -23,7 +23,7 @@ function HospitalLogin() {
                 <span className="text-[#2092A0]">SEVA</span>
               </h1>
               <h1 className="md:text-2xl text-3xl md:text-balance text-center font-bold mb-6">
-                Doctor Log In
+                Hospital Log In
               </h1>
 
               <form>

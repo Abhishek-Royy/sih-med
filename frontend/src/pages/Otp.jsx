@@ -4,8 +4,8 @@ import {Link} from "react-router-dom"
 const EnterOTP = () => {
   return (
     <>
-      <div className="main w-full md:h-[85vh] md:flex block md:py-0 py-16 lg:px-24">
-        <div className="patient-left md:w-1/2 w-[95%] mx-auto h-full flex items-center justify-center ">
+      <div className="main w-full md:h-[85vh]  md:flex block md:py-0 py-16 lg:px-24">
+        <div className="patient-left md:w-1/2 w-[95%] mx-auto h-auto flex items-center justify-center ">
           <img
             className="w-full h-full object-contain md:block hidden"
             src="https://png.pngtree.com/png-vector/20200402/ourmid/pngtree-the-doctor-examines-the-patient-with-covid-19-symptoms-png-image_2171886.jpg"
@@ -16,7 +16,7 @@ const EnterOTP = () => {
             <span className="text-[#2092A0]">SEVA</span>
           </h1>
         </div>
-        <div className="patient-right md:w-1/2 w-[95%] mx-auto h-full md:mt-0 mt-10">
+        <div className="patient-right md:w-1/2 w-[95%] mx-auto h-auto md:mt-0 mt-10">
           <div className="h-full w-full flex items-center justify-center ">
             <div className="bg-white p-8 rounded-lg max-w-md w-full"
             

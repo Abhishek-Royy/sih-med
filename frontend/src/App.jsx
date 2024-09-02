@@ -127,6 +127,10 @@ import InventoryManagement from "./hospitalSide/common/pages/InventoryManagement
 import PatientManagement from "./hospitalSide/common/pages/PatientManagement";
 import Test from "./hospitalSide/common/pages/Test";
 
+
+// patient side
+import OpdBooking from "./patientSide/OpdBooking";
+
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -151,7 +155,7 @@ function App() {
     <>
       {/* Show Navbar only when not in hospital side pages */}
       {!isHospitalSide && <Navbar />}
-      <div className="app-container flex min-h-screen">
+      <div className="app-container flex min-h-auto">
         {/* Show Sidebar only on hospital side pages */}
         {isHospitalSide && <Sidebar />}
         <Routes>
@@ -163,6 +167,9 @@ function App() {
           <Route path="/auth/hospital-login" element={<HospitalLogin />} />
           <Route path="/auth/patient-login/otp" element={<EnterOTP />} />
           <Route path="/patienthomeui-profile" element={<PatientHomeUi />} />
+
+          {/* Patientside */}
+          <Route path="/patienthomeui-profile/opd-booking" element={<OpdBooking/>}/>
 
           {/* HOSPITAL SIDE */}
           <Route path="/hospital-app-side" element={<HospitalApp />} />

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import emergancy from "/emargency.svg";
 import opdbooking from "/opdbook.svg";
@@ -76,8 +77,8 @@ function PatientHomeUi() {
                   </p>
                 </div>
               </a>
-              <a
-                href="#"
+              <Link
+                to="/patienthomeui-profile/opd-booking"
                 className="flex flex-col items-center bg-white border border-yellow-200 rounded-lg shadow md:flex-row md:max-w-xl w-[95%] h-[60%]  hover:bg-gray-100 p-2"
                 style={{
                   boxShadow:
@@ -98,7 +99,7 @@ function PatientHomeUi() {
                     2021 so far, in reverse chronological order.
                   </p>
                 </div>
-              </a>
+              </Link>
               {/* <a
                 href="#"
                 className="flex flex-col items-center bg-white border border-yellow-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 p-2"
