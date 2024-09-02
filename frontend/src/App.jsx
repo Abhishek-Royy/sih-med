@@ -130,6 +130,7 @@ import Test from "./hospitalSide/common/pages/Test";
 
 // patient side
 import OpdBooking from "./patientSide/OpdBooking";
+import PatientRecord from "./patientSide/PatientRecord";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -167,6 +168,7 @@ function App() {
           <Route path="/auth/hospital-login" element={<HospitalLogin />} />
           <Route path="/auth/patient-login/otp" element={<EnterOTP />} />
           <Route path="/patienthomeui-profile" element={<PatientHomeUi />} />
+          <Route path="/patienthomeui-record" element={<PatientRecord />} />
 
           {/* Patientside */}
           <Route path="/patienthomeui-profile/opd-booking" element={<OpdBooking/>}/>

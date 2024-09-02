@@ -6,7 +6,11 @@ function PatientLogin() {
     <>
       <div className="main w-full h-auto md:flex block pt-16 md:pb-8 pb-16 lg:px-24">
         <div className="patient-left md:w-1/2 w-[95%] mx-auto h-full md:flex items-center justify-center hidden">
-            <img className="w-full h-full object-contain" src="https://png.pngtree.com/png-vector/20200402/ourmid/pngtree-the-doctor-examines-the-patient-with-covid-19-symptoms-png-image_2171886.jpg" alt="" />
+          <img
+            className="w-full h-full object-contain"
+            src="https://png.pngtree.com/png-vector/20200402/ourmid/pngtree-the-doctor-examines-the-patient-with-covid-19-symptoms-png-image_2171886.jpg"
+            alt=""
+          />
         </div>
         <div className="patient-right md:w-1/2 w-[95%] mx-auto h-full ">
           <div className="flex items-center justify-end w-full h-full ">
@@ -20,9 +24,8 @@ function PatientLogin() {
               </h1>
 
               <div className=" justify-around mb-6">
-                <Link
-                  to=""
-                  className="text-black  w-full flex items-center justify-center   font-medium rounded-lg text-sm px-5 py-2 text-center   me-2 mb-2"
+                <button
+                  className="text-black  w-full flex items-center justify-center   font-medium rounded-lg text-sm px-5 py-2 text-center   me-2 mb-2 active:scale-[0.97]"
                   style={{
                     boxShadow:
                       " rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px",
@@ -34,10 +37,9 @@ function PatientLogin() {
                     alt=""
                   />
                   Sign in with Google
-                </Link>
-                <Link
-                  to=""
-                  className="flex items-center justify-center w-full px-4 py-2  text-sm font-medium text-black  rounded bg-white"
+                </button>
+                <button
+                  className="flex items-center justify-center w-full px-4 py-2  text-sm font-medium text-black  rounded bg-white active:scale-[0.97]"
                   style={{
                     boxShadow:
                       " rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px",
@@ -49,7 +51,7 @@ function PatientLogin() {
                     className="w-10  mr-2"
                   />
                   Sign in with Aadhaar
-                </Link>
+                </button>
               </div>
 
               <div className="mb-4 text-center text-black">or</div>
@@ -119,12 +121,12 @@ function PatientLogin() {
                   </a>
                 </div>
                 <Link to="/auth/patient-login/otp">
-                <button
-                  className="w-full px-4 py-3 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  type="submit"
-                >
-                  Sign Up
-                </button>
+                  <button
+                    className="w-full px-4 py-3 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    type="submit"
+                  >
+                    Sign Up
+                  </button>
                 </Link>
               </form>
 

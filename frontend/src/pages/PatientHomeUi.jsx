@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import emergancy from "/emargency.svg";
 import opdbooking from "/opdbook.svg";
 import bedavailable from "/bed.png";
+// import QrCode from "../patientSide/QrCode";
 
 function PatientHomeUi() {
   return (
@@ -100,28 +101,12 @@ function PatientHomeUi() {
                   </p>
                 </div>
               </Link>
-              {/* <a
-                href="#"
-                className="flex flex-col items-center bg-white border border-yellow-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 p-2"
-                style={{boxShadow:" rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px"}}
-              >
-                <img
-                  className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-                  src={emergancy}
-                  alt=""
-                />
-                <div className="flex flex-col justify-between p-4 leading-normal">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-[#000058] ">
-                    EMERGENCY CARE
-                  </h5>
-                  <p className="mb-3 font-normal text-gray-800 dark:text-gray-500">
-                    Here are the biggest enterprise technology acquisitions of
-                    2021 so far, in reverse chronological order.
-                  </p>
-                </div>
-              </a> */}
             </div>
           </div>
+{/* 
+          <div className="one-scan w-full h-auto mt-10">
+            <QrCode />
+          </div> */}
         </div>
       </div>
     </>
