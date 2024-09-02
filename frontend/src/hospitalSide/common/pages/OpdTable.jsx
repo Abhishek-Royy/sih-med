@@ -1,7 +1,5 @@
-// // src/components/PatientTable.js
 
 // import React from 'react';
-// import { motion } from "framer-motion";
 
 // const demoData = [
 //   {
@@ -10,7 +8,7 @@
 //     phoneNumber: '123-456-7890',
 //     dateTime: '2024-09-01 10:00 AM',
 //     department: 'Cardiology',
-//     queueStatus: 'Waiting',
+//     queueStatus: 'Arrived',
 //   },
 //   {
 //     tokenNo: '002',
@@ -18,7 +16,7 @@
 //     phoneNumber: '098-765-4321',
 //     dateTime: '2024-09-01 10:30 AM',
 //     department: 'Neurology',
-//     queueStatus: 'Complete',
+//     queueStatus: 'NotArrived',
 //   },
 //   {
 //     tokenNo: '003',
@@ -26,68 +24,86 @@
 //     phoneNumber: '555-123-4567',
 //     dateTime: '2024-09-01 11:00 AM',
 //     department: 'Orthopedics',
-//     queueStatus: 'Cancelled',
+//     queueStatus: 'NotArrived',
 //   },
 // ];
 
 // const statusColors = {
-//   Complete: 'bg-green-500',
-//   Waiting: 'bg-yellow-500',
-//   Cancelled: 'bg-red-500',
+//   Arrived: 'bg-green-500',
+//   NotArrived: 'bg-red-500',
 // };
 
-// const OpdTable = () => {
+// const ButtonComponent = ({ status, onClick }) => {
+//   const buttonClasses = {
+//     Arrived: 'bg-green-500 hover:bg-green-600',
+//     NotArrived: 'bg-red-500 hover:bg-red-600',
+//   };
+
 //   return (
-//     <motion.div
-//         className="bg-[#dedede] bg-opacity-50 backdrop-blur-md shadow-lg rounded-xl p-5 border border-gray-700 mb-8"
-//         initial={{ opacity: 0, y: 20 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ delay: 0.2 }}
+//     <div className="flex space-x-2">
+//       <button
+//         className={`text-white py-1 px-3 rounded ${buttonClasses.Arrived}`}
+//         onClick={() => onClick('Arrived')}
 //       >
+//         Arrived
+//       </button>
+//       <button
+//         className={`text-white py-1 px-3 rounded ${buttonClasses.NotArrived}`}
+//         onClick={() => onClick('NotArrived')}
+//       >
+//        Not-Arrived
+//       </button>
+//     </div>
+//   );
+// };
+
+// const PatientTable = () => {
+//   const handleActionClick = (status) => {
+//     console.log(`Action clicked: ${status}`);
+//     // Add your logic to handle the button click here
+//   };
+
+//   return (
 //     <div className="overflow-x-auto p-4">
 //       <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-md">
-//         <thead className="bg-gray-100 text-gray-600 uppercase text-sm">
+//         <thead className="bg-gray-100 text-gray-600 uppercase text-sm border-b border-gray-300">
 //           <tr>
-//             <th className="py-3 px-6 text-left">Token No</th>
-//             <th className="py-3 px-6 text-left">Patient Name</th>
-//             <th className="py-3 px-6 text-left">Phone Number</th>
-//             <th className="py-3 px-6 text-left">Date & Time</th>
-//             <th className="py-3 px-6 text-left">Department</th>
-//             <th className="py-3 px-6 text-left">Queue Status</th>
+//             <th className="py-3 px-6 text-left border-r border-gray-300">Token No</th>
+//             <th className="py-3 px-6 text-left border-r border-gray-300">Patient Name</th>
+//             <th className="py-3 px-6 text-left border-r border-gray-300">Phone Number</th>
+//             <th className="py-3 px-6 text-left border-r border-gray-300">Date & Time</th>
+//             <th className="py-3 px-6 text-left border-r border-gray-300">Department</th>
+//             <th className="py-3 px-6 text-left border-r border-gray-300">Queue Status</th>
 //             <th className="py-3 px-6 text-left">Action</th>
 //           </tr>
 //         </thead>
 //         <tbody className="text-sm text-gray-700">
 //           {demoData.map((item, index) => (
-//             <tr key={index} className="border-b hover:bg-gray-50">
-//               <td className="py-3 px-6">{item.tokenNo}</td>
-//               <td className="py-3 px-6">{item.patientName}</td>
-//               <td className="py-3 px-6">{item.phoneNumber}</td>
-//               <td className="py-3 px-6">{item.dateTime}</td>
-//               <td className="py-3 px-6">{item.department}</td>
-//               <td className="py-3 px-6">
+//             <tr key={index} className="border-b border-gray-300 hover:bg-gray-50">
+//               <td className="py-3 px-6 border-r border-gray-300">{item.tokenNo}</td>
+//               <td className="py-3 px-6 border-r border-gray-300">{item.patientName}</td>
+//               <td className="py-3 px-6 border-r border-gray-300">{item.phoneNumber}</td>
+//               <td className="py-3 px-6 border-r border-gray-300">{item.dateTime}</td>
+//               <td className="py-3 px-6 border-r border-gray-300">{item.department}</td>
+//               <td className="py-3 px-6 border-r border-gray-300">
 //                 <span className={`inline-block px-3 py-1 rounded-full text-white ${statusColors[item.queueStatus]}`}>
 //                   {item.queueStatus}
 //                 </span>
 //               </td>
-//               <td className="py-3 px-6 flex space-x-2">
-//                 <button className="bg-green-500 text-white py-1 px-3 rounded hover:bg-green-600">Complete</button>
-//                 <button className="bg-yellow-500 text-white py-1 px-3 rounded hover:bg-yellow-600">Waiting</button>
-//                 <button className="bg-red-500 text-white py-1 px-3 rounded hover:bg-red-600">Cancelled</button>
+//               <td className="py-3 px-6">
+//                 <ButtonComponent onClick={handleActionClick} />
 //               </td>
 //             </tr>
 //           ))}
 //         </tbody>
 //       </table>
 //     </div>
-//     </motion.div>
 //   );
 // };
 
-// export default OpdTable;
+// export default PatientTable;
 
-// ******************************************************************************************************************
-
+// *************************************************************************************************
 
 
 import React from 'react';
@@ -99,7 +115,31 @@ const demoData = [
     phoneNumber: '123-456-7890',
     dateTime: '2024-09-01 10:00 AM',
     department: 'Cardiology',
-    queueStatus: 'Waiting',
+    queueStatus: 'Arrived',
+  },
+  {
+    tokenNo: '002',
+    patientName: 'John Doe',
+    phoneNumber: '123-456-7890',
+    dateTime: '2024-09-01 10:00 AM',
+    department: 'Cardiology',
+    queueStatus: 'Arrived',
+  },
+  {
+    tokenNo: '003',
+    patientName: 'John Doe',
+    phoneNumber: '123-456-7890',
+    dateTime: '2024-09-01 10:00 AM',
+    department: 'Cardiology',
+    queueStatus: 'NotArrived',
+  },
+  {
+    tokenNo: '001',
+    patientName: 'Jane Smith',
+    phoneNumber: '098-765-4321',
+    dateTime: '2024-09-01 10:30 AM',
+    department: 'Neurology',
+    queueStatus: 'NotArrived',
   },
   {
     tokenNo: '002',
@@ -107,7 +147,15 @@ const demoData = [
     phoneNumber: '098-765-4321',
     dateTime: '2024-09-01 10:30 AM',
     department: 'Neurology',
-    queueStatus: 'Complete',
+    queueStatus: 'Arrived',
+  },
+  {
+    tokenNo: '003',
+    patientName: 'Jane Smith',
+    phoneNumber: '098-765-4321',
+    dateTime: '2024-09-01 10:30 AM',
+    department: 'Neurology',
+    queueStatus: 'NotArrived',
   },
   {
     tokenNo: '003',
@@ -115,89 +163,143 @@ const demoData = [
     phoneNumber: '555-123-4567',
     dateTime: '2024-09-01 11:00 AM',
     department: 'Orthopedics',
-    queueStatus: 'Cancelled',
+    queueStatus: 'NotArrived',
+  },
+  {
+    tokenNo: '004',
+    patientName: 'Mitchle Starc',
+    phoneNumber: '555-123-8546',
+    dateTime: '2024-09-01 16:20 AM',
+    department: 'ENT',
+    queueStatus: 'Arrived',
+  },
+  {
+    tokenNo: '001',
+    patientName: 'Gal Gadot',
+    phoneNumber: '555-123-7843',
+    dateTime: '2024-09-01 18:00 AM',
+    department: 'Gynochology',
+    queueStatus: 'Arrived',
+  },
+  {
+    tokenNo: '002',
+    patientName: 'Gal Gadot',
+    phoneNumber: '555-123-7843',
+    dateTime: '2024-09-01 18:00 AM',
+    department: 'Gynochology',
+    queueStatus: 'Arrived',
+  },
+  {
+    tokenNo: '003',
+    patientName: 'Gal Gadot',
+    phoneNumber: '555-123-7843',
+    dateTime: '2024-09-01 18:00 AM',
+    department: 'Gynochology',
+    queueStatus: 'NotArrived',
   },
 ];
 
 const statusColors = {
-  Complete: 'bg-green-500',
-  Waiting: 'bg-yellow-500',
-  Cancelled: 'bg-red-500',
+  Arrived: 'bg-green-500',
+  NotArrived: 'bg-red-500',
 };
 
 const ButtonComponent = ({ status, onClick }) => {
   const buttonClasses = {
-    Complete: 'bg-green-500 hover:bg-green-600',
-    Waiting: 'bg-yellow-500 hover:bg-yellow-600',
-    Cancelled: 'bg-red-500 hover:bg-red-600',
+    Arrived: 'bg-green-500 hover:bg-green-600',
+    NotArrived: 'bg-red-500 hover:bg-red-600',
   };
 
   return (
     <div className="flex space-x-2">
       <button
-        className={`text-white py-1 px-3 rounded ${buttonClasses.Complete}`}
-        onClick={() => onClick('Complete')}
+        className={`text-white py-1 px-3 rounded ${buttonClasses.Arrived}`}
+        onClick={() => onClick('Arrived')}
       >
-        Complete
+        Arrived
       </button>
       <button
-        className={`text-white py-1 px-3 rounded ${buttonClasses.Waiting}`}
-        onClick={() => onClick('Waiting')}
+        className={`text-white py-1 px-3 rounded ${buttonClasses.NotArrived}`}
+        onClick={() => onClick('NotArrived')}
       >
-        Waiting
+       Not-Arrived
       </button>
-      <button
-        className={`text-white py-1 px-3 rounded ${buttonClasses.Cancelled}`}
-        onClick={() => onClick('Cancelled')}
-      >
-        Cancelled
-      </button>
+    </div>
+  );
+};
+
+const DepartmentTable = ({ department }) => {
+  const filteredData = demoData.filter((item) => item.department === department);
+ 
+  // add counter
+  const patientCount = filteredData.length;
+
+  const handleActionClick = (status) => {
+    console.log(`Action clicked: ${status}`);
+    // aikhan a backend logic add kora jabe .
+  };
+
+  return (
+    <div className="mb-8">
+      <h2 className="text-2xl font-bold mb-4">{department} Department</h2>
+      <p className="mb-4">Total Patients Booked OPD: {patientCount}</p>
+      <div className="overflow-x-auto p-4">
+        <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-md">
+          <thead className="bg-gray-100 text-gray-600 uppercase text-sm border-b border-gray-300">
+            <tr>
+              <th className="py-3 px-6 text-left border-r border-gray-300">Token No</th>
+              <th className="py-3 px-6 text-left border-r border-gray-300">Patient Name</th>
+              <th className="py-3 px-6 text-left border-r border-gray-300">Phone Number</th>
+              <th className="py-3 px-6 text-left border-r border-gray-300">Date & Time</th>
+              <th className="py-3 px-6 text-left border-r border-gray-300">Department</th>
+              <th className="py-3 px-6 text-left border-r border-gray-300">Queue Status</th>
+              <th className="py-3 px-6 text-left">Action</th>
+            </tr>
+          </thead>
+          <tbody className="text-sm text-gray-700">
+            {filteredData.map((item, index) => (
+              <tr key={index} className="border-b border-gray-300 hover:bg-gray-50">
+                <td className="py-3 px-6 border-r border-gray-300">{item.tokenNo}</td>
+                <td className="py-3 px-6 border-r border-gray-300">{item.patientName}</td>
+                <td className="py-3 px-6 border-r border-gray-300">{item.phoneNumber}</td>
+                <td className="py-3 px-6 border-r border-gray-300">{item.dateTime}</td>
+                <td className="py-3 px-6 border-r border-gray-300">{item.department}</td>
+                <td className="py-3 px-6 border-r border-gray-300">
+                  <span className={`inline-block px-3 py-1 rounded-full text-white ${statusColors[item.queueStatus]}`}>
+                    {item.queueStatus}
+                  </span>
+                </td>
+                <td className="py-3 px-6">
+                  <ButtonComponent onClick={handleActionClick} />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
 
 const PatientTable = () => {
-  const handleActionClick = (status) => {
-    console.log(`Action clicked: ${status}`);
-    // Add your logic to handle the button click here
-  };
+  const departments = ['Cardiology', 'Neurology', 'Orthopedics','Gynochology','ENT','Oncology','General Visit']; // You can add more departments here.
 
   return (
-    <div className="overflow-x-auto p-4">
-      <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-md">
-        <thead className="bg-gray-100 text-gray-600 uppercase text-sm border-b border-gray-300">
-          <tr>
-            <th className="py-3 px-6 text-left border-r border-gray-300">Token No</th>
-            <th className="py-3 px-6 text-left border-r border-gray-300">Patient Name</th>
-            <th className="py-3 px-6 text-left border-r border-gray-300">Phone Number</th>
-            <th className="py-3 px-6 text-left border-r border-gray-300">Date & Time</th>
-            <th className="py-3 px-6 text-left border-r border-gray-300">Department</th>
-            <th className="py-3 px-6 text-left border-r border-gray-300">Queue Status</th>
-            <th className="py-3 px-6 text-left">Action</th>
-          </tr>
-        </thead>
-        <tbody className="text-sm text-gray-700">
-          {demoData.map((item, index) => (
-            <tr key={index} className="border-b border-gray-300 hover:bg-gray-50">
-              <td className="py-3 px-6 border-r border-gray-300">{item.tokenNo}</td>
-              <td className="py-3 px-6 border-r border-gray-300">{item.patientName}</td>
-              <td className="py-3 px-6 border-r border-gray-300">{item.phoneNumber}</td>
-              <td className="py-3 px-6 border-r border-gray-300">{item.dateTime}</td>
-              <td className="py-3 px-6 border-r border-gray-300">{item.department}</td>
-              <td className="py-3 px-6 border-r border-gray-300">
-                <span className={`inline-block px-3 py-1 rounded-full text-white ${statusColors[item.queueStatus]}`}>
-                  {item.queueStatus}
-                </span>
-              </td>
-              <td className="py-3 px-6">
-                <ButtonComponent onClick={handleActionClick} />
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div>
+      {departments.map((department) => (
+        <DepartmentTable key={department} department={department} />
+      ))}
     </div>
   );
 };
 
 export default PatientTable;
+
+
+
+
+
+
+
+
+

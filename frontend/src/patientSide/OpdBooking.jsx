@@ -9,6 +9,7 @@ function OpdBooking() {
         department: '',
         opdDate: '',
         opdTime: '',
+        age:''
       });
     
       const departments = ['Gynochology', 'Orthopedic', 'Cardiology', 'Neurology', 'ENT', 'General Visit','Oncology'];
@@ -119,6 +120,22 @@ function OpdBooking() {
               id="aadhaarNo"
               name="aadhaarNo"
               value={formData.aadhaarNo}
+              onChange={handleChange}
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              required
+            />
+          </div>
+
+          {/* Age */}
+          <div>
+            <label htmlFor="age" className="block text-sm font-medium text-gray-700">
+              Age
+            </label>
+            <input
+              type="text"
+              id="age"
+              name="age"
+              value={formData.age}
               onChange={handleChange}
               className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               required
