@@ -101,6 +101,29 @@ function PatientHomeUi() {
                   </p>
                 </div>
               </Link>
+              <Link
+                to="/patienthomeui-profile/opd-booking"
+                className="flex flex-col items-center bg-white border border-yellow-200 rounded-lg shadow md:flex-row md:max-w-xl w-[95%] h-[60%]  hover:bg-gray-100 p-2"
+                style={{
+                  boxShadow:
+                    " rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px",
+                }}
+              >
+                <img
+                  className="object-contain w-1/2 rounded-t-lg h-90 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+                  src="https://www.clipartmax.com/png/full/63-631284_hospital-admission-clipart-admitted-in-hospital-icon.png"
+                  alt=""
+                />
+                <div className="flex flex-col justify-between p-4 leading-normal">
+                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-[#000058] ">
+                    PATIENT ADMISSION
+                  </h5>
+                  <p className="mb-3 font-normal text-gray-800 dark:text-gray-500">
+                    Here are the biggest enterprise technology acquisitions of
+                    2021 so far, in reverse chronological order.
+                  </p>
+                </div>
+              </Link>
             </div>
           </div>
 {/* 
