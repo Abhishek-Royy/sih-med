@@ -102,7 +102,7 @@ function PatientHomeUi() {
                 </div>
               </Link>
               <Link
-                to="/patienthomeui-profile/opd-booking"
+                to="#"
                 className="flex flex-col items-center bg-white border border-yellow-200 rounded-lg shadow md:flex-row md:max-w-xl w-[95%] h-[60%]  hover:bg-gray-100 p-2"
                 style={{
                   boxShadow:
