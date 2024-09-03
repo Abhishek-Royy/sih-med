@@ -102,7 +102,7 @@ function HospitalLogin() {
 
               <div className="mt-4 text-center text-gray-400">
                 <p>
-                  Don’t have an account yet?{" "}
+                  Allready have an account?{" "}
                   <Link to="#" className="text-blue-500 hover:underline">
                     Login here
                   </Link>
