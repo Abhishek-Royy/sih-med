@@ -9,10 +9,12 @@ function OpdBooking() {
         department: '',
         opdDate: '',
         opdTime: '',
-        age:''
+        age:'',
+        hospital:''
       });
     
       const departments = ['Gynochology', 'Orthopedic', 'Cardiology', 'Neurology', 'ENT', 'General Visit','Oncology'];
+      const hospitals = ['Barasat Medical', 'Apello Nursinghome', 'Manipal Hospital', 'NRS Medical', 'Kalyani AIMS', 'HCG EKO','Dishan Nursinghome'];
     
       const handleChange = (e) => {
         const { name, value } = e.target;
@@ -158,6 +160,26 @@ function OpdBooking() {
               <option value="" disabled>Select Department</option>
               {departments.map((dept) => (
                 <option key={dept} value={dept}>{dept}</option>
+              ))}
+            </select>
+          </div>
+
+          {/* hospital */}
+          <div>
+            <label htmlFor="hospital" className="block text-sm font-medium text-gray-700">
+               Hospital
+            </label>
+            <select
+              id="hospital"
+              name="hospital"
+              value={formData.hospital}
+              onChange={handleChange}
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              required
+            >
+              <option value="" disabled>Select Hospital</option>
+              {hospitals.map((hospitalName) => (
+                <option key={hospitalName} value={hospitalName}>{hospitalName}</option>
               ))}
             </select>
           </div>
